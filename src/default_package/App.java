@@ -20,6 +20,11 @@ public class App {
             System.out.print("Ingresa una opción: ");
             int opcion = Integer.parseInt(entrada.readLine());
 
+            while(opcion < 1 || opcion > 3){
+                System.out.print("Opcion ingresada inválida. Intentelo nuevamente: ");
+                opcion = Integer.parseInt(entrada.readLine());
+            }
+
             switch(opcion) {
                 case 1:
                     System.out.print("Ingresa el número de empleado: ");
@@ -31,10 +36,6 @@ public class App {
                     System.out.print("Ingresa el número de empleado: ");
                     IdEmpleado = Integer.parseInt(entrada.readLine());
                     empleados.add(IdEmpleado);
-                    break;
-
-                default:
-                    System.out.println("Opcion ingresada inválida");
                     break;
             }
 
